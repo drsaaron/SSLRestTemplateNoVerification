@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.blazartech</groupId>
+    <artifactId>SSLRestTemplateNoVerification</artifactId>
+    <version>1.0-RELEASE</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+    </properties>
+    <description>this project will create a RestTemplate that supports SSL connections without verifying the connection</description>
+    
+    <parent>
+        <groupId>com.blazartech</groupId>
+        <artifactId>blazarjavaparent</artifactId>
+        <version>1.7-RELEASE</version>
+    </parent>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+        </dependency>
+    </dependencies>
+    
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+    
+    <repositories>  
+        <repository>
+            <id>nexus</id>
+            <name>my nexus</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+</project>
